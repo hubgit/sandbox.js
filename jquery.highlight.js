@@ -82,11 +82,9 @@ jQuery.fn.unhighlight = function (options) {
 jQuery.fn.highlight = function (pattern, options) {
     var settings = { className: 'highlight', element: 'span' };
     jQuery.extend(settings, options);
-  
-    var re = new RegExp(pattern);
-    
-    return this.each(function () {
-        jQuery.highlight(this, re, settings.element, settings.className);
+      
+    return this.each(function() {
+        jQuery.highlight(this, pattern, settings.element, settings.className);
     });
 };
 
